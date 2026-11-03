@@ -599,7 +599,7 @@ section.tight{padding:88px 0;}
 .form-success .mark{
   width:52px;height:52px;margin:0 auto 22px;
   border-radius:50%;
-  background:var(--green-600);
+  background:var(--cocoa-800);
   display:flex;align-items:center;justify-content:center;
 }
 .form-success .mark svg{width:24px;height:24px;color:#fff;}

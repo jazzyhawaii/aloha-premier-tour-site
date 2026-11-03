@@ -57,9 +57,13 @@ document.addEventListener("DOMContentLoaded", () => {
     if (a.dataset.nav === path) a.classList.add("active");
   });
 
-  // inquiry form mock-submit (concept stage: no backend / no booking)
+  // Inquiry form: no submission endpoint is wired up yet. Validation runs
+  // for real, but on a valid submit we show an honest "not connected yet"
+  // notice rather than a fake success message. Replace this with a real
+  // fetch() to a working endpoint (and proper loading/error states) once
+  // one exists.
   const form = document.getElementById("inquiry-form");
-  const success = document.getElementById("inquiry-success");
+  const pendingNotice = document.getElementById("inquiry-success");
   if (form) {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
@@ -68,8 +72,8 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
       form.classList.add("is-hidden");
-      success?.classList.add("is-visible");
-      success?.scrollIntoView({ behavior: "smooth", block: "center" });
+      pendingNotice?.classList.add("is-visible");
+      pendingNotice?.scrollIntoView({ behavior: "smooth", block: "center" });
     });
   }
 });
