@@ -342,6 +342,11 @@ section.tight{padding:88px 0;}
   gap:72px;
   align-items:center;
 }
+/* Plan Your Visit's expectations+form layout: keep its own column
+   ratio at every width above the mobile breakpoint (it was pinned
+   there via inline style before, which also broke mobile stacking
+   since inline styles beat the @media rules below). */
+.intro-grid.plan-grid{grid-template-columns:.62fr 1.38fr; align-items:flex-start;}
 .intro-media{position:relative;}
 .intro-media img{border-radius:3px;}
 .intro-media .frame-tag{
@@ -729,6 +734,7 @@ section.tight{padding:88px 0;}
   .contact-grid{grid-template-columns:1fr;gap:40px;}
   .intro-media .frame-tag{position:static;margin-top:16px;}
   .hero-body{flex-direction:column;align-items:flex-start;}
+  .intro-grid.plan-grid{grid-template-columns:1fr;}
 }
 @media (max-width:480px){
   .container{padding:0 20px;}
